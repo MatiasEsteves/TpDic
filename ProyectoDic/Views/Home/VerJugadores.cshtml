@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Jugadores:</p>
+@foreach (Jugador item in ViewBag.Jugador)
+{
+            <tr>
+      
+                <td>@item.NombreJugador</td>
+              
+            </tr>
+}  

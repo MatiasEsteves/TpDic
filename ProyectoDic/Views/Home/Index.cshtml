@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<div CLASS="ROW">
+@foreach (Equipo item in ViewBag.Equipo)
+{
+            <div class="card COL-2">
+            @* <img src="..." class="card-img-top" alt="..."> *@
+            <div class="card-body">
+            <h5 class="card-title">@item.NombreEquipo</h5>
+            @* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> *@
+            <a href='@Url.Action("ListaJ", "Home",new { IdEquipo = item.IdEquipo })'class="btn btn-primary">Ver Jugadores</a>
+            <Button type="button" class = "btn btn-primary" data-bs-toggle = "modal" data-bs-target = "#ModalJugador" onclick = "MostrarJugadores(@item.IdEquipo)">
+            Pop Up
+            </Button>
+                    </div>
+            </div>
+    
+
+}
+
+
+
+
+
+
+
+    <div class="modal fade" id="ModalJugador" tabindex="-1" aria_labelledby="exampleModalObjeto" aria_hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"  id="NombreJ"></h5>
+                    <button type = "button" class="close" data-dismiss="modal" arial-label="Close">
+                    <span aria-hidden ="true">&times;</span>
+                   </button>
+</div>
+<div class="modal-body" id="ListaJugadores">
+</div>
+<div class="Modal-footer">
+<button type="Button" class="btn bnt-secondary" data-dismiss="modal"> Close<Button/>
+<button type="Button" class="btn bnt-secondary"> Save Changes<Button/>
+    <div>
+<div/>
+<div/>
