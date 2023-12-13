@@ -58,4 +58,14 @@ public static class BD
 
 
 
+public static List<Torneo> ListaTorneos(int IdEquipo)
+{
+    List<Torneo> ListaTorneos = new List<Torneo>();
+     using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string sql = "SELECT * FROM TorneosGanados WHERE IdEquipo = @pIdEquipo";
+            ListaTorneos = db.Query<Torneo>(sql,new {pIdEquipo=IdEquipo}).ToList();
+        }
+ return ListaTorneos;
+ }
 }

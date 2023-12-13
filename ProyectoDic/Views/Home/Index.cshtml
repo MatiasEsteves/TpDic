@@ -20,6 +20,9 @@
             <Button type="button" class = "btn btn-primary" data-bs-toggle = "modal" data-bs-target = "#ModalJugador" onclick = "MostrarJugadores(@item.IdEquipo)">
             Pop Up
             </Button>
+             <Button type="button" class = "btn btn-primary" data-bs-toggle = "modal" data-bs-target = "#ModalTorneo" onclick = "MostrarTorneos(@item.IdEquipo)">
+            Torneos
+            </Button>
                     </div>
             </div>
     
@@ -40,12 +43,30 @@
                     <button type = "button" class="close" data-dismiss="modal" arial-label="Close">
                     <span aria-hidden ="true">&times;</span>
                    </button>
+                </div>
+                <div class="modal-body" id="ListaJugadores">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+  <div class="modal fade" id="ModalTorneo" tabindex="-1" aria_labelledby="exampleModalObjeto" aria_hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"  id="NombreTorneo"></h5>
+                    <button type = "button" class="close" data-dismiss="modal" arial-label="Close">
+                    <span aria-hidden ="true">&times;</span>
+                   </button>
+                </div>
+                <div class="modal-body" id="ListaTorneos">
+                </div>
+            </div>
+        </div>  
 </div>
-<div class="modal-body" id="ListaJugadores">
-</div>
-<div class="Modal-footer">
-<button type="Button" class="btn bnt-secondary" data-dismiss="modal"> Close<Button/>
-<button type="Button" class="btn bnt-secondary"> Save Changes<Button/>
-    <div>
-<div/>
-<div/>
